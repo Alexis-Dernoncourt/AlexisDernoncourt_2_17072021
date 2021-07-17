@@ -63,6 +63,10 @@ header{
     width: 100%;
     background-color: none;
 }
+
+.signUpArea{
+    padding-bottom: 37px;
+}
 .signUpArea::before{
     content: "";
     display: inline-block;
