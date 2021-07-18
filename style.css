@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/* ## HEADER / MENU ## */
+
 li, a, .signupBtn{
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
@@ -24,37 +26,47 @@ body{
 
 header{
     position: sticky;
-    height: 120px;
+    top: 0;
+    background-color: #fafafafe;
+    height: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
     padding: 0 10%;
 }
 
 #logo{
     cursor: pointer;
-    width: 15%;
-    height: 100%;
+    width: auto;
+    min-height: 50px;
+    max-height: 120px;
+    height: auto;
     margin-right: auto;
+    justify-self: flex-start;
 }
 
 nav{
     height: 100%;
+    background-color: #fafafafe;
 }
 
 .menu-nav, .signupBtn{
     list-style-type: none;
     height: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .menu-nav li{
     display: inline-block;
-    padding: 0 20px;
+    padding: 0;
     height: 90%;
-    margin-right: 80px;
+}
+.menu-nav li:nth-child(2){
+    margin-right: 0;
+    margin-left: 50px;
 }
 .menu-nav li a, .signupBtn{
     transition: all 0.1s ease 0s;
@@ -71,7 +83,8 @@ nav{
 }
 
 .signUpArea{
-    padding-bottom: 55px;
+    padding-bottom: 53px;
+    margin-left: 50px;
 }
 .signUpArea::before{
     content: "";
@@ -112,4 +125,71 @@ nav{
     width: 100%;
     background-color: #184b97;
     transition: all 0.3s ease-in-out 0s;
+}
+
+/* ## MAIN AREA ## */
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+    align-content : flex-start;
+    justify-content: center;
+    align-items: stretch;
+    
+}
+
+
+/*## RESPONSIVE ##*/
+
+@media screen and (max-width: 740px) {
+    header{
+        padding: 0;
+    }
+    #logo{
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    nav{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .menu-nav, .signupBtn{
+        height: auto;
+        justify-content: space-evenly;
+    }
+    .menu-nav li{
+        height: min-content;
+    }
+    .menu-nav li:nth-child(1){
+        padding: 0 20px;
+        margin-right: 0;
+    }
+    .menu-nav li:nth-child(2){
+        padding: 0 20px;
+        margin-right: 0;
+    }
+    .menu-nav li a::before{
+        margin-bottom: 15px;
+    }
+    .menu-nav li a:hover::before{
+        margin-bottom: 7px;
+    }
+    .signUpArea{
+        position: absolute;
+        height: auto;
+        top: 5px;
+        right: 15px;
+        overflow: hidden;
+        padding-bottom: 10px;
+        margin-left: 0;
+    }
+    .signUpArea::before{
+        margin-bottom: 10px;
+    }
+    .signUpArea:hover::before{
+        margin-bottom: 3px;
+    }
 }
