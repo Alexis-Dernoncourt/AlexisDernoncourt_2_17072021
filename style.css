@@ -20,7 +20,7 @@ a{
 body{
     display: grid;
     align-content: center;
-    grid-template-columns: 12fr 12fr 12fr; 
+    grid-template-columns: 12fr 12fr 12fr 12fr 12fr; 
     grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
@@ -173,7 +173,7 @@ nav{
     background-color:rgb(230, 230, 230);
     margin: 25px;
     padding: 50px;
-    width: 450px;
+    width: 100%;
 }
 
 .activity {
