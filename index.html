@@ -7,29 +7,51 @@
     <meta name="description" content="">
     <title>Reservia - réservez votre prochaine plus belle destination ici !</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img id="logo" src="assets/images/logo/Reservia.svg" alt="logo" />
+        
         <nav>
+            <img id="logo" src="assets/images/logo/Reservia.svg" alt="logo" />
             <ul class="menu-nav">
                 <li><a href="#">Hébergements</a></li>
                 <li><a href="#">Activités</a></li>
+                <li>
+                    <a href="#">
+                        <button class="signinBtn">S'inscrire</button>
+                    </a>
+                </li>
             </ul>
         </nav>
-        <a href="#" class="signUpArea"><button class="signupBtn">S'inscrire</button></a>
+        
     </header>
 
     
     <section class="search">
         <div>
-            <h2>Hébergements à Marseille</h2>
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <p>En plein centre ville ou en pleine nature</p>
+            <div class="input-search-container"> 
+                <form class="travelSearch" action="#" method="#">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <input type="text" name="travelSearch" id="travelSearch"/>
+                    <button name="travelSearch" type="submit">Rechercher</button>
+                </form>
+            </div>
+            <div>
+                <form class="filterSearch" action="#" method="#">
+                    <div class="filter-economique">
+                        <input type="checkbox" value="OK" name="check" id="economique" />
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
     <section class="book">
         <div>
-
+            <h2>Hébergements à Marseille</h2>
         </div>
     </section>
 

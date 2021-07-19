@@ -8,10 +8,10 @@
 
 /* ## HEADER / MENU ## */
 
-li, a, .signupBtn{
+li, a, .signinBtn{
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
 }
 a{
     text-decoration: none;
@@ -42,102 +42,82 @@ header{
     position: sticky;
     top: 0;
     background-color: #fafafafe;
+    /*
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 10%;
+    */
+    padding: 0 10px;
     height: auto;
 }
 
 #logo{
     cursor: pointer;
-    width: auto;
+    display: block;
+    width: 100%;
+    max-width: 150px;
     min-height: 50px;
-    max-height: 120px;
-    height: auto;
-    margin-right: auto;
-    justify-self: flex-start;
+    max-height: 150px;
+    height: 100%;
 }
 
 nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
     background-color: #fafafafe;
 }
 
-.menu-nav, .signupBtn{
-    list-style-type: none;
-    height: 120px;
+.menu-nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    width: auto;
+    height: 100%;
+    min-height: 50px;
+    /*list-style-type: none;*/
 }
 
 .menu-nav li{
-    display: inline-block;
-    padding: 0;
-    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 50px;
 }
-.menu-nav li:nth-child(2){
-    margin-right: 0;
-    margin-left: 50px;
+
+.menu-nav li a{
+    transition: all 0.1s ease 0s;
+    color: #1f1f1f;
+    text-decoration: none;
+    height: 100%;
+    padding: 50px 50px;
 }
-.menu-nav li a, .signupBtn{
+.signinBtn{
     transition: all 0.1s ease 0s;
     color: #0065fc;
-    text-decoration: none;
-}
-.menu-nav li a::before{
-    content: "";
-    display: inline-block;
-    margin-bottom: 35px;
-    height: 0;
-    width: 100%;
-    background-color: none;
-}
-
-.signUpArea{
-    padding-bottom: 53px;
-    margin-left: 50px;
-}
-.signUpArea::before{
-    content: "";
-    display: inline-block;
-    margin-bottom: 35px;
-    margin-top: 10px;
-    height: 0px;
-    width: 100%;
-    background-color: none;
-}
-
-.signupBtn:hover, .menu-nav li a:hover{
-    color: #14376b;
+    height: auto;
     font-weight: 600;
-}
-.menu-nav li a:hover::before{
-    content: "";
-    display: inline-block;
-    margin-bottom: 28px;
-    height: 7px;
-    width: 100%;
-    background-color: #184b97;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.signupBtn{
+    text-decoration: none;
     border: none;
     background: none;
     cursor: pointer;
-    height: 100%;
-    color: #0065fc;
 }
-.signUpArea:hover::before{
-    content: " ";
-    display: inline-block;
-    margin-bottom: 28px;
-    height: 7px;
-    width: 100%;
-    background-color: #184b97;
-    transition: all 0.3s ease-in-out 0s;
+
+.menu-nav li:hover{
+    border-top: 10px solid #257fe6;
+    margin-top: -10px;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.signinBtn:hover, .menu-nav li a:hover{
+    color: #257fe6;
+    font-weight: 900;
 }
 
 /* ## MAIN AREA ## */
@@ -147,9 +127,62 @@ nav{
     height: auto;
 }
 .search > div{
+    border: 1px solid black;
     margin: 20px;
     padding: 50px;
+    /*background-color: rgb(255, 181, 181);*/
+}
+.search h2, .search p{
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+.input-search-container{
+    display: inline-flex;
+    margin: 20px 5px;
+    border-radius: 20px;
+    padding-left: 20px;
+    width: max-content;
     background-color: rgb(230, 230, 230);
+}
+.input-search-container span{
+    padding-top: 0px;
+}
+
+.search input[type='text']{
+    -webkit-appearance: none;
+    width: 270px;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    margin-left: 12px;
+    padding: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+.search button[type='submit']{
+    /*margin-left: -5px;*/
+    background-color: rgb(37, 127, 230);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    width: 150px;
+    height: 49px;
+    margin-left: -5px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.search #economique{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    -webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+
 }
 
 .book { 
@@ -212,7 +245,7 @@ footer{
         align-items: center;
         padding: 20px 0;
     }
-    .menu-nav, .signupBtn{
+    .menu-nav, .signinBtn{
         height: auto;
         justify-content: space-evenly;
     }
