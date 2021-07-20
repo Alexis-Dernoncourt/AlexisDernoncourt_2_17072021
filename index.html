@@ -18,9 +18,8 @@
                 <li><a href="#">Hébergements</a></li>
                 <li><a href="#">Activités</a></li>
                 <li>
-                    <a href="#">
-                        <button class="signinBtn">S'inscrire</button>
-                    </a>
+                    
+                        <button class="signinBtn"><a id="signinBtn" href="#">S'inscrire</a></button>
                 </li>
             </ul>
         </nav>
@@ -32,17 +31,19 @@
         <div>
             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
-            <div class="input-search-container"> 
+            <div class="search-container"> 
                 <form class="travelSearch" action="#" method="#">
                     <span class="fas fa-map-marker-alt"></span>
-                    <input type="text" name="travelSearch" id="travelSearch"/>
+                    <input type="text" name="travelSearch" id="travelSearch" placeholder="Marseille, France"/>
                     <button name="travelSearch" type="submit">Rechercher</button>
                 </form>
             </div>
-            <div>
+            <div class="filterSearch-container">
+                <p><b>Filtres</b></p>
                 <form class="filterSearch" action="#" method="#">
                     <div class="filter-economique">
-                        <input type="checkbox" value="OK" name="check" id="economique" />
+                        <input type="checkbox" value="economique" name="filter-search" id="economique" />
+                        <label for="economique"></label>
                     </div>
                 </form>
             </div>
