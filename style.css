@@ -78,8 +78,10 @@ nav{
 
 .menu-nav li{
     display: flex;
+    flex-grow: auto;
     justify-content: center;
     align-items: center;
+    min-width: 230px;
     height: 100%;
     min-height: 50px;
 }
@@ -129,7 +131,9 @@ nav{
     height: auto;
 }
 .search > div{
+    /*
     border: 1px solid black;
+    */
     margin: 20px;
     padding: 50px;
     /*background-color: rgb(255, 181, 181);*/
@@ -140,7 +144,7 @@ nav{
 }
 .search-container{
     display: inline-flex;
-    margin: 20px 5px;
+    margin: 20px 5px 40px 5px;
     border-radius: 20px;
     padding-left: 20px;
     width: max-content;
@@ -178,6 +182,7 @@ nav{
     border-radius: 0 20px 20px 0;
     padding: 15px;
     font-family: 'Raleway', sans-serif;
+    cursor: pointer;
 }
 
 /*## FILTRES ##*/
@@ -185,16 +190,100 @@ nav{
 .filterSearch-container{
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    height: max-content;
+    /*
+    background: #FFEFBA;
+    */
 }
 
 .filterSearch{
-    margin-left: 50px;
-    position: relative;
+    margin-left: 5px;
+    min-height: 45px;
 }
 
-.filter-economique input[type='checkbox']{
-    display: none;
+.filterItemsContainer{
+    display: inline;
+    padding: 0 50px;
+    height: 50px;
+    width: 100%;
 }
+
+.filterItemsContainer div{
+    position: relative;
+    display: inline-block;
+    min-width: 250px;
+    height: 50px;
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 25px;
+}
+
+.filter-economic .circle, .filter-family .circle{
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(210, 225, 246);
+    background-color: rgb(210, 225, 246);
+    border-radius: 25px;
+}
+
+.filterItemsContainer label{
+    display: inline-block;
+    border-radius: 50%;
+    white-space: nowrap;
+    transition: all .2s;
+    padding: 12px 40px;
+    cursor: pointer;
+    margin-right: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.filterItemsContainer label::before{
+    display: inline-block;
+    position: absolute;
+    left: -2px;
+    top: 17px;
+    font-style: normal;
+    font-variant: normal;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    content: "\f53a";
+    color: rgb(42, 98, 202);
+    text-align: center;
+    transition: transform .3s ease-in-out;
+}
+
+.filterItemsContainer input[type='checkbox']{
+    height: auto;
+    margin-left: 15px;
+    opacity: 0;
+}
+
+.filterItemsContainer input[type="checkbox"]:checked + label {
+    color: rgb(37, 127, 230);
+    transition: all .2s;
+}
+
+/*
+.filter-economic label::after{
+    content: 'Économique';
+    display: inline-flex;
+    width: auto;
+    padding: 12px 4px;
+    padding-left: 80px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+*/
 
 /*## section2 #########################*/
 
