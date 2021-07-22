@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.space{
+    margin: 15px;
+}
+
 /* ## HEADER / MENU ## */
 
 li, a, .signinBtn{
@@ -44,15 +48,15 @@ header{
     background-color: #fff;
     padding: 0 10px;
     height: auto;
+    z-index: 1000;
 }
 
 #logo{
     cursor: pointer;
     display: block;
     width: 100%;
-    max-width: 150px;
+    max-width: 120px;
     min-height: 50px;
-    max-height: 150px;
     height: 100%;
     margin-left: 50px;
 }
@@ -78,10 +82,10 @@ nav{
 
 .menu-nav li{
     display: flex;
-    flex-grow: auto;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-width: 230px;
+    min-width: auto;
     height: 100%;
     min-height: 50px;
 }
@@ -131,16 +135,13 @@ nav{
     height: auto;
 }
 .search > div{
-    /*
-    border: 1px solid black;
-    */
     margin: 20px;
     padding: 50px;
-    /*background-color: rgb(255, 181, 181);*/
 }
 .search h2, .search>p:nth-child(1){
     line-height: 2rem;
     margin-bottom: 10px;
+    font-size: 1.4em;
 }
 .search-container{
     display: inline-flex;
@@ -170,7 +171,6 @@ nav{
     font-size: 16px;
 }
 .search button[type='submit']{
-    /*margin-left: -5px;*/
     background-color: rgb(37, 127, 230);
     color: white;
     font-weight: 700;
@@ -192,9 +192,6 @@ nav{
     align-items: center;
     justify-content: flex-start;
     height: max-content;
-    /*
-    background: #FFEFBA;
-    */
 }
 
 .filterSearch{
@@ -203,21 +200,22 @@ nav{
 
 .filterItemsContainer{
     display: inline;
-    padding: 0 15px;
-    height: 50px;
-    width: 100%;
 }
-
+/*
+.filterItemsContainer .filter{
+    margin: 5px;
+}
+*/
 .filterItemsContainer div{
     position: relative;
     display: inline-block;
-    margin: 0 10px;
+    margin: 5px 10px;
     height: 50px;
     border: 2px solid rgb(224, 224, 224);
     border-radius: 25px;
 }
 
-.filter-economic .circle, .filter-family .circle{
+.filter-economic .circle, .filter-family .circle, .filter-romantik .circle, .filter-animals .circle{
     display: inline-block;
     position: absolute;
     top: -2px;
@@ -245,20 +243,32 @@ nav{
     display: inline-block;
     position: absolute;
     left: -2px;
-    top: 17px;
+    /*top: 17px;*/
     font-style: normal;
     font-variant: normal;
     height: 50px;
     width: 50px;
     border-radius: 50px;
     text-rendering: auto;
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    font-size: 12px;
-    content: "\f53a";
+    font-size: 20px;
     color: rgb(42, 98, 202);
     text-align: center;
     transition: transform .3s ease-in-out;
+}
+
+.filter-economic label::before{
+    content: '\f53a';
+}
+.filter-family label::before{
+    content: '\f1ae';
+}
+.filter-romantik label::before{
+    content: '\f004';
+}
+.filter-animals label::before{
+    content: '\f6d3';
 }
 
 .filterItemsContainer input[type='checkbox']{
@@ -269,20 +279,31 @@ nav{
 
 .filterItemsContainer input[type="checkbox"]:checked + label {
     color: rgb(37, 127, 230);
+    background-color: rgb(210, 225, 246);
     transition: all .2s;
+    border-radius: 0 25px 25px 0;
+    height: 100%;
 }
 
-/*
-.filter-economic label::after{
-    content: 'Économique';
-    display: inline-flex;
-    width: auto;
-    padding: 12px 4px;
-    padding-left: 80px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+.info-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-*/
+
+.info{
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 2px solid rgb(210, 225, 246);
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+    font-family: serif;
+}
+.info > i{
+    color: rgb(37, 127, 230);
+}
 
 /*## section2 #########################*/
 
