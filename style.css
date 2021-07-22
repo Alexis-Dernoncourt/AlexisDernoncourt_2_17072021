@@ -198,13 +198,12 @@ nav{
 }
 
 .filterSearch{
-    margin-left: 5px;
     min-height: 45px;
 }
 
 .filterItemsContainer{
     display: inline;
-    padding: 0 50px;
+    padding: 0 15px;
     height: 50px;
     width: 100%;
 }
@@ -212,7 +211,7 @@ nav{
 .filterItemsContainer div{
     position: relative;
     display: inline-block;
-    min-width: 250px;
+    margin: 0 10px;
     height: 50px;
     border: 2px solid rgb(224, 224, 224);
     border-radius: 25px;
