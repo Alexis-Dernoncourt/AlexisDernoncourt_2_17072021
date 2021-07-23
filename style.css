@@ -156,9 +156,6 @@ nav{
     background-color: rgb(230, 230, 230);
 }
 .search-container span{
-    /*
-    padding-top: 0px;
-    */
     margin: 0 2px;
 }
 
@@ -205,11 +202,7 @@ nav{
 .filterItemsContainer{
     display: inline;
 }
-/*
-.filterItemsContainer .filter{
-    margin: 5px;
-}
-*/
+
 .filterItemsContainer div{
     position: relative;
     display: inline-block;
@@ -247,7 +240,6 @@ nav{
     display: inline-block;
     position: absolute;
     left: -2px;
-    /*top: 17px;*/
     font-style: normal;
     font-variant: normal;
     height: 50px;
@@ -259,7 +251,6 @@ nav{
     font-size: 20px;
     color: rgb(42, 98, 202);
     text-align: center;
-    transition: transform .3s ease-in-out;
 }
 
 .filter-economic label::before{
@@ -337,7 +328,6 @@ nav{
     height: 230px;
     background-color: #fff;
     border-radius: 25px;
-    /*border: 1px solid black;*/
 }
 
 
