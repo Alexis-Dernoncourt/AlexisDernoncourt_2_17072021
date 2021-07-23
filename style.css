@@ -12,7 +12,7 @@
 
 /* ## HEADER & MENU ########################### */
 
-li, a, .signinBtn{
+li, a, .signin-btn{
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -100,14 +100,14 @@ nav{
     padding: 50px 50px;
 }
 
-#signinBtn{
+#signin-btn{
     transition: all 0.1s ease 0s;
     color: #257fe6;
     font-weight: bold;
     margin-top: 10px;
 }
 
-.signinBtn{
+.signin-btn{
     text-decoration: none;
     border: none;
     background: none;
@@ -128,7 +128,7 @@ nav{
     color: #257fe6;
     font-weight: 700;
 }
-#signinBtn:hover {
+#signin-btn:hover {
     color: #004b7e;
 }
 
@@ -188,22 +188,22 @@ nav{
 
 /*## FILTERS ###########################*/
 
-.filterSearch-container{
+.filter-search-container{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: max-content;
 }
 
-.filterSearch{
+.filter-search{
     min-height: 45px;
 }
 
-.filterItemsContainer{
+.filter-items-container{
     display: inline;
 }
 
-.filterItemsContainer div{
+.filter-items-container div{
     position: relative;
     display: inline-block;
     margin: 5px 10px;
@@ -224,7 +224,7 @@ nav{
     border-radius: 25px;
 }
 
-.filterItemsContainer label{
+.filter-items-container label{
     display: inline-block;
     border-radius: 50%;
     white-space: nowrap;
@@ -236,7 +236,7 @@ nav{
     font-weight: bold;
 }
 
-.filterItemsContainer label::before{
+.filter-items-container label::before{
     display: inline-block;
     position: absolute;
     left: -2px;
@@ -266,13 +266,13 @@ nav{
     content: '\f6d3';
 }
 
-.filterItemsContainer input[type='checkbox']{
+.filter-items-container input[type='checkbox']{
     height: auto;
     margin-left: 15px;
     opacity: 0;
 }
 
-.filterItemsContainer input[type="checkbox"]:checked + label {
+.filter-items-container input[type="checkbox"]:checked + label {
     color: rgb(42, 98, 202);
     background-color: rgb(210, 225, 246);
     transition: all .2s;
@@ -329,6 +329,8 @@ nav{
     height: 230px;
     background-color: #fff;
     border-radius: 25px;
+    padding: 5px;
+    position: relative;
 }
 
 .book .see-more{
@@ -338,6 +340,86 @@ nav{
 }
 .book .see-more:hover{
     color: rgb(37, 127, 230);
+}
+
+.book-card .card-head{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.book-card .card-content{
+    width: 97%;
+    height: 38%;
+    background-color: white;
+    position: absolute;
+    top: 61%;
+    border-radius: 0 0 20px 20px;
+    padding: 15px;
+}
+
+.book-card .card-content p{
+    font-size: 16px;
+}
+
+.book-card .card-content .evaluation{
+    background-color: rgb(139, 67, 67);
+    width: 150px;
+    height: 20px;
+}
+
+.book-card .cannebiere{
+    background-image: url('assets/images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 90%;
+    background-position-y: -30px;
+}
+
+.book-card .port{
+    background-image: url('assets/images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 90%;
+    background-position-y: -30px;
+}
+
+.book-card .mouettes{
+    background-image: url('assets/images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 90%;
+    background-position-y: -30px;
+}
+
+.book-card .mer{
+    background-image: url('assets/images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90%;
+    background-position-y: -60px;
+}
+
+.book-card .panier{
+    background-image: url('assets/images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 90%;
+    background-position-y: -30px;
+}
+
+.book-card .amina{
+    background-image: url('assets/images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90%;
+    background-position-y: -150px;
 }
 
 
@@ -395,7 +477,7 @@ footer{
         align-items: center;
         padding: 20px 0;
     }
-    .menu-nav, .signinBtn{
+    .menu-nav, .signin-btn{
         height: auto;
         justify-content: space-evenly;
     }
