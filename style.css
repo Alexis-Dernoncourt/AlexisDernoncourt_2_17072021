@@ -15,7 +15,7 @@
 li, a, .signin-btn{
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1em;
 }
 a{
     text-decoration: none;
@@ -27,24 +27,13 @@ body{
     grid-template-columns: repeat(6, 1fr); 
     grid-template-rows: 1fr; 
     gap: 0px 0px;
-    /*
-    grid-template-areas:
-        "header header header header header"
-        "search search search search search"
-        "book book book popular popular"
-        "book book book popular popular"
-        "activity activity activity activity activity"
-        "activity activity activity activity activity"
-        "footer footer footer footer footer";
-    */
     margin: 0 5px;
     background-color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 header{
-    /*grid-area: header;*/
     grid-column: span 7;
     position: sticky;
     top: 0;
@@ -138,7 +127,6 @@ nav{
 /* ## MAIN AREA ########################### */
 
 .search { 
-    /*grid-area: search;*/
     grid-column: span 7;
     height: auto;
 }
@@ -146,10 +134,16 @@ nav{
     margin: 20px;
     padding: 50px;
 }
-.search h2, .search>p:nth-child(1){
+.search h1{
     line-height: 2rem;
     margin-bottom: 10px;
-    font-size: 1.4em;
+    font-size: 1.35em;
+    margin-left: 5px;
+}
+.search-intro{
+    line-height: 2rem;
+    font-size: 1.125em;
+    margin-left: 5px;
 }
 .search-container{
     display: inline-flex;
@@ -165,23 +159,23 @@ nav{
 
 .search input[type='text']{
     -webkit-appearance: none;
-    width: 270px;
-    height: 50px;
+    /*width: 270px;*/
+    height: auto;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 0;
     margin-left: 12px;
     padding: 15px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
 }
 .search button[type='submit']{
     background-color: rgb(37, 127, 230);
     color: white;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
     width: 150px;
-    height: 50px;
+    height: auto;
     margin-left: -5px;
     border: 1px solid rgb(37, 127, 230);
     border-radius: 0 20px 20px 0;
@@ -195,8 +189,10 @@ nav{
 .filter-search-container{
     display: flex;
     align-items: center;
+    /*
     justify-content: flex-start;
     height: max-content;
+    */
 }
 
 .filter-search{
@@ -240,20 +236,26 @@ nav{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+.filter-items-container label:hover{
+    color: rgb(42, 98, 202);
+}
 
 .filter-items-container label::before{
     display: inline-block;
     position: absolute;
     left: -2px;
+    top: 10px;
+    width: 50px;
+    /*
     font-style: normal;
     font-variant: normal;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
     text-rendering: auto;
-    font-family: 'Font Awesome 5 Free';
+    height: 50px;
     font-weight: 900;
-    font-size: 20px;
+    */
+    border-radius: 50px;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.25em;
     color: rgb(42, 98, 202);
     text-align: center;
 }
@@ -289,6 +291,7 @@ nav{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 5px;
 }
 
 .info{
@@ -299,16 +302,14 @@ nav{
     text-align: center;
     padding: 5px;
     margin-right: 10px;
-    font-family: serif;
 }
 .info > i{
     color: rgb(37, 127, 230);
 }
 
-
+/*## BOOK SECTION #########################*/
 
 .book { 
-    /*grid-area: book;*/
     grid-column: span 4;
     display: flex;
 }
@@ -330,6 +331,10 @@ nav{
     margin: 15px 0;
 }
 
+.book h2{
+    font-size: 1.75em;
+}
+
 .book-container .book-card{
     width: 100%;
     height: 250px;
@@ -338,10 +343,11 @@ nav{
     padding: 5px;
     position: relative;
     overflow: hidden;
+    box-shadow: 10px 10px 25px #bababa;
 }
 
 .book .see-more{
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 700;
     color: black;
 }
@@ -357,16 +363,16 @@ nav{
 
 .book-card .card-content{
     width: 100%;
-    height: 38%;
+    height: 35%;
     background-color: white;
     position: absolute;
-    top: 61%;
+    top: 65%;
     border-radius: 0 0 20px 20px;
     padding: 15px;
 }
 
 .book-card .card-content p{
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .book-card .card-content .evaluation{
@@ -381,7 +387,7 @@ nav{
     background-size: cover;
     width: 100%;
     height: 90%;
-    background-position-y: -30px;
+    background-position-y: -35px;
 }
 
 .book-card .port{
@@ -390,7 +396,7 @@ nav{
     background-size: cover;
     width: 100%;
     height: 90%;
-    background-position-y: -30px;
+    background-position-y: -35px;
 }
 
 .book-card .mouettes{
@@ -399,7 +405,7 @@ nav{
     background-size: cover;
     width: 100%;
     height: 90%;
-    background-position-y: -30px;
+    background-position-y: -35px;
 }
 
 .book-card .mer{
@@ -408,7 +414,7 @@ nav{
     background-size: cover;
     width: 100%;
     height: 90%;
-    background-position-y: -60px;
+    background-position-y: -90px;
 }
 
 .book-card .panier{
@@ -417,7 +423,7 @@ nav{
     background-size: cover;
     width: 100%;
     height: 90%;
-    background-position-y: -30px;
+    background-position-y: -35px;
 }
 
 .book-card .amina{
@@ -426,14 +432,13 @@ nav{
     background-size: cover;
     width: 100%;
     height: 90%;
-    background-position-y: -150px;
+    background-position-y: -180px;
 }
 
 
 /*## POPULAR SECTION #########################*/
 
 .popular {
-    /*grid-area: popular;*/
     grid-column: span 3;
     display: flex;
 }
@@ -449,7 +454,6 @@ nav{
 /*##  ACTIVITY SECTION #####################*/
 
 .activity {
-    /*grid-area: activity;*/
     grid-column: span 7;
     display: flex;
 }
@@ -462,7 +466,6 @@ nav{
 }
 
 footer{
-    /*grid-area: footer;*/
     grid-column: span 7;
     padding: 5px;
     text-align: center;
