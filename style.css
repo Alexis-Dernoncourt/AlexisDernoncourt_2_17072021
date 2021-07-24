@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+*, ::before, ::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -24,10 +24,11 @@ a{
 body{
     display: grid;
     align-content: center;
-    grid-template-columns: 12fr 12fr 12fr 12fr 12fr; 
-    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px;
+    /*
+    grid-template-areas:
         "header header header header header"
         "search search search search search"
         "book book book popular popular"
@@ -35,6 +36,7 @@ body{
         "activity activity activity activity activity"
         "activity activity activity activity activity"
         "footer footer footer footer footer";
+    */
     margin: 0 5px;
     background-color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
@@ -42,12 +44,13 @@ body{
 }
 
 header{
-    grid-area: header;
+    /*grid-area: header;*/
+    grid-column: span 7;
     position: sticky;
     top: 0;
     background-color: #fff;
     padding: 0 10px;
-    height: auto;
+    /*height: auto;*/
     z-index: 1000;
 }
 
@@ -135,7 +138,8 @@ nav{
 /* ## MAIN AREA ########################### */
 
 .search { 
-    grid-area: search;
+    /*grid-area: search;*/
+    grid-column: span 7;
     height: auto;
 }
 .search > div{
@@ -207,6 +211,7 @@ nav{
     position: relative;
     display: inline-block;
     margin: 5px 10px;
+    width: max-content;
     height: 50px;
     border: 2px solid rgb(224, 224, 224);
     border-radius: 25px;
@@ -303,34 +308,36 @@ nav{
 
 
 .book { 
-    grid-area: book;
+    /*grid-area: book;*/
+    grid-column: span 4;
     display: flex;
 }
 .book > div{
     background-color:rgb(230, 230, 230);
     margin: 25px;
     padding: 50px;
-    /*width: 100%;*/
+    width: 100%;
     border-radius: 25px;
 }
 
 .book-container{
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 85%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 30px;
     padding: 30px 0;
     margin: 15px 0;
 }
 
 .book-container .book-card{
-    width: 300px;
-    height: 230px;
+    width: 100%;
+    height: 250px;
     background-color: #fff;
     border-radius: 25px;
     padding: 5px;
     position: relative;
+    overflow: hidden;
 }
 
 .book .see-more{
@@ -349,7 +356,7 @@ nav{
 }
 
 .book-card .card-content{
-    width: 97%;
+    width: 100%;
     height: 38%;
     background-color: white;
     position: absolute;
@@ -371,7 +378,7 @@ nav{
 .book-card .cannebiere{
     background-image: url('assets/images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 90%;
     background-position-y: -30px;
@@ -380,7 +387,7 @@ nav{
 .book-card .port{
     background-image: url('assets/images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 90%;
     background-position-y: -30px;
@@ -389,7 +396,7 @@ nav{
 .book-card .mouettes{
     background-image: url('assets/images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 90%;
     background-position-y: -30px;
@@ -407,7 +414,7 @@ nav{
 .book-card .panier{
     background-image: url('assets/images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 90%;
     background-position-y: -30px;
@@ -426,7 +433,8 @@ nav{
 /*## POPULAR SECTION #########################*/
 
 .popular {
-    grid-area: popular;
+    /*grid-area: popular;*/
+    grid-column: span 3;
     display: flex;
 }
 .popular > div{
@@ -441,7 +449,8 @@ nav{
 /*##  ACTIVITY SECTION #####################*/
 
 .activity {
-    grid-area: activity;
+    /*grid-area: activity;*/
+    grid-column: span 7;
     display: flex;
 }
 .activity > div{
@@ -449,10 +458,12 @@ nav{
     margin: 25px;
     padding: 50px;
     width: 100%;
+    border-radius: 25px;
 }
 
 footer{
-    grid-area: footer;
+    /*grid-area: footer;*/
+    grid-column: span 7;
     padding: 5px;
     text-align: center;
     background-color:rgb(230, 230, 230);
@@ -463,6 +474,11 @@ footer{
 /*#########   RESPONSIVE   ############################*/
 
 @media screen and (max-width: 740px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 /*##   HEADER - MENU   ###########################*/
     header{
         padding: 0;
