@@ -110,8 +110,7 @@ nav{
 }
 
 .menu-nav li:hover{
-    border-top: 10px solid #257fe6;
-    margin-top: -10px;
+    border-top: 7px solid #257fe6;
     font-weight: 700;
     transition: all 0.2s ease-in-out 0s;
 }
@@ -119,6 +118,7 @@ nav{
 .menu-nav li a:hover{
     color: #257fe6;
     font-weight: 700;
+    margin-top: -7px;
 }
 #signin-btn:hover {
     color: #004b7e;
