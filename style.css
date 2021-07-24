@@ -344,6 +344,11 @@ nav{
     position: relative;
     overflow: hidden;
     box-shadow: 10px 10px 25px #bababa;
+    transition: all .1s;
+}
+.book-card:hover{
+    transform: scale(1.02);
+    transition: all .1s;
 }
 
 .book .see-more{
