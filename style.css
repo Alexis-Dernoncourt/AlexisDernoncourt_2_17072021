@@ -14,6 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Gestion affichage des ancres sous menu fixe*/
 h2[id]:before{
     content:"";
     display: block;
@@ -258,13 +259,6 @@ nav{
     left: -2px;
     top: 10px;
     width: 50px;
-    /*
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    height: 50px;
-    font-weight: 900;
-    */
     border-radius: 50px;
     font-family: 'Font Awesome 5 Free';
     font-size: 1.25em;
@@ -274,15 +268,35 @@ nav{
 
 .filter-economic label::before{
     content: '\f53a';
+    transition: all .2s;
+}
+.filter-economic label:hover::before{
+    transform: scale(1.1);
+    transition: all .2s;
 }
 .filter-family label::before{
     content: '\f1ae';
+    transition: all .2s;
+}
+.filter-family label:hover::before{
+    transform: scale(1.1);
+    transition: all .2s;
 }
 .filter-romantik label::before{
     content: '\f004';
+    transition: all .2s;
+}
+.filter-romantik label:hover::before{
+    transform: scale(1.1);
+    transition: all .2s;
 }
 .filter-animals label::before{
     content: '\f6d3';
+    transition: all .2s;
+}
+.filter-animals label:hover::before{
+    transform: scale(1.1);
+    transition: all .2s;
 }
 
 .filter-items-container input[type='checkbox']{
@@ -348,7 +362,7 @@ nav{
 }
 
 .book-container a{
-    color: inherit;
+    color: unset;
 }
 
 .book-container .book-card{
