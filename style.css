@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --main-blue-color: #0065FC;
+    --light-blue-color: #DEEBFF;
+    --light-grey-color: #F2F2F2;
+}
+
 .space{
     margin: 15px;
 }
@@ -107,7 +113,7 @@ nav{
 
 #signin-btn{
     transition: all 0.1s ease 0s;
-    color: #257fe6;
+    color: var(--main-blue-color);
     font-weight: bold;
     margin-top: 10px;
 }
@@ -123,18 +129,18 @@ nav{
 }
 
 .menu-nav li:hover{
-    border-top: 7px solid #257fe6;
+    border-top: 7px solid var(--main-blue-color);
     font-weight: 700;
     transition: all 0.2s ease-in-out 0s;
 }
 
 .menu-nav li a:hover{
-    color: #257fe6;
+    color: var(--main-blue-color);
     font-weight: 700;
     margin-top: -7px;
 }
 #signin-btn:hover {
-    color: #004b7e;
+    color: #29b6f6;
 }
 
 /* ## MAIN AREA ########################### */
@@ -164,7 +170,7 @@ nav{
     border-radius: 20px;
     padding-left: 20px;
     width: max-content;
-    background-color: rgb(230, 230, 230);
+    background-color: var(--light-grey-color);
 }
 .search-container span{
     margin: 0 2px;
@@ -174,7 +180,7 @@ nav{
     -webkit-appearance: none;
     /*width: 270px;*/
     height: auto;
-    border: 1px solid rgb(230, 230, 230);
+    border: 1px solid var(--light-grey-color);
     border-radius: 0;
     margin-left: 12px;
     padding: 15px;
@@ -183,14 +189,14 @@ nav{
     font-size: 1em;
 }
 .search button[type='submit']{
-    background-color: rgb(37, 127, 230);
+    background-color: var(--main-blue-color);
     color: white;
     font-weight: 700;
     font-size: 1em;
     width: 150px;
     height: auto;
     margin-left: -5px;
-    border: 1px solid rgb(37, 127, 230);
+    border: 1px solid var(--main-blue-color);
     border-radius: 0 20px 20px 0;
     padding: 15px;
     font-family: 'Raleway', sans-serif;
@@ -222,7 +228,7 @@ nav{
     margin: 5px 10px;
     width: max-content;
     height: 50px;
-    border: 2px solid rgb(224, 224, 224);
+    border: 2px solid var(--light-blue-color);
     border-radius: 25px;
 }
 
@@ -233,8 +239,8 @@ nav{
     left: -2px;
     height: 50px;
     width: 50px;
-    border: 2px solid rgb(210, 225, 246);
-    background-color: rgb(210, 225, 246);
+    border: 2px solid var(--light-blue-color);
+    background-color: var(--light-blue-color);
     border-radius: 25px;
 }
 
@@ -250,7 +256,7 @@ nav{
     font-weight: bold;
 }
 .filter-items-container label:hover{
-    color: rgb(42, 98, 202);
+    color: var(--main-blue-color);
 }
 
 .filter-items-container label::before{
@@ -262,7 +268,7 @@ nav{
     border-radius: 50px;
     font-family: 'Font Awesome 5 Free';
     font-size: 1.25em;
-    color: rgb(42, 98, 202);
+    color: var(--main-blue-color);
     text-align: center;
 }
 
@@ -306,8 +312,8 @@ nav{
 }
 
 .filter-items-container input[type="checkbox"]:checked + label {
-    color: rgb(42, 98, 202);
-    background-color: rgb(210, 225, 246);
+    color: var(--main-blue-color);
+    background-color: var(--light-blue-color);
     transition: all .2s;
     border-radius: 0 25px 25px 0;
     height: 100%;
@@ -324,13 +330,13 @@ nav{
     width: 35px;
     height: 35px;
     border-radius: 25px;
-    border: 2px solid rgb(210, 225, 246);
+    border: 2px solid var(--light-blue-color);
     text-align: center;
     padding: 5px;
     margin-right: 10px;
 }
 .info > i{
-    color: rgb(37, 127, 230);
+    color: var(--main-blue-color);
 }
 
 /*## BOOK SECTION #########################*/
@@ -340,7 +346,7 @@ nav{
     display: flex;
 }
 .book > div{
-    background-color:rgb(230, 230, 230);
+    background-color:var(--light-grey-color);
     margin: 25px;
     padding: 50px;
     width: 100%;
@@ -387,7 +393,7 @@ nav{
     color: black;
 }
 .book .see-more:hover{
-    color: rgb(37, 127, 230);
+    color: var(--main-blue-color);
 }
 
 .book-card .card-head{
@@ -478,7 +484,7 @@ nav{
     display: flex;
 }
 .popular > div{
-    background-color:rgb(230, 230, 230);
+    background-color: var(--light-grey-color);
     margin: 25px;
     padding: 50px;
     width: 100%;
@@ -493,7 +499,7 @@ nav{
     display: flex;
 }
 .activity > div{
-    background-color:rgb(230, 230, 230);
+    background-color: var(--light-grey-color);
     margin: 25px;
     padding: 50px;
     width: 100%;
@@ -505,7 +511,7 @@ footer{
     grid-column: span 7;
     padding: 5px;
     text-align: center;
-    background-color:rgb(230, 230, 230);
+    background-color:var(--light-grey-color);
     height: 500px;
 }
 
