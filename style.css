@@ -366,8 +366,9 @@ nav{
     font-size: 1.75em;
 }
 
-.book-container a{
+.book-container a, .popular-card-container a{
     color: unset;
+    font-weight: normal;
 }
 
 .book-container .book-card{
@@ -419,7 +420,7 @@ nav{
     margin: 5px 0;
 }
 
-.book-card .card-content .evaluation{
+.evaluation{
     width: 100%;
     font-size: 0.8em;
 }
@@ -431,7 +432,7 @@ nav{
 }
 
 .book-card .cannebiere{
-    background-image: url('assets/images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
+    background-image: url('assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -440,7 +441,7 @@ nav{
 }
 
 .book-card .port{
-    background-image: url('assets/images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+    background-image: url('assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -449,7 +450,7 @@ nav{
 }
 
 .book-card .mouettes{
-    background-image: url('assets/images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg');
+    background-image: url('assets/images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -458,7 +459,7 @@ nav{
 }
 
 .book-card .mer{
-    background-image: url('assets/images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
+    background-image: url('assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -467,7 +468,7 @@ nav{
 }
 
 .book-card .panier{
-    background-image: url('assets/images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
+    background-image: url('assets/images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -476,7 +477,7 @@ nav{
 }
 
 .book-card .amina{
-    background-image: url('assets/images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+    background-image: url('assets/images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -492,12 +493,71 @@ nav{
     display: flex;
 }
 .popular > div{
+    display: flex;
+    flex-direction: column;
     background-color: var(--light-grey-color);
     margin: 25px;
-    padding: 50px;
+    padding: 50px 50px 0 50px;
     width: 100%;
     border-radius: 25px;
 }
+
+.popular-container > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-container h2, .fa-chart-line {
+    font-size: 1.75em;
+}
+
+.popular-card-container{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    padding-top: 25px;
+}
+
+.popular-card{
+    width: 100%;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 25px 0;
+    display: flex;
+    box-shadow: 0px 0px 25px #bababa;
+    overflow: hidden;
+}
+
+.popular-card-img{
+    width: 100%;
+    height: auto;
+    border-radius: 25px 0 0 25px;
+}
+
+.soleil{
+    background-image: url('assets/images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: 100%;
+    background-position-x: -45px;
+}
+
+.popular-card-content{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px 25px;
+}
+
+.popular-card-evaluation{
+    margin-top: auto;
+}
+
+
 
 
 /*##  ACTIVITY SECTION #####################*/
