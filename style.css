@@ -358,9 +358,8 @@ nav{
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: 30px 30px;
-    padding: 30px 0;
-    margin: 15px 0;
+    gap: 50px 50px;
+    padding: 50px 0;
 }
 
 .book h2{
@@ -379,7 +378,7 @@ nav{
     padding: 5px;
     position: relative;
     overflow: hidden;
-    box-shadow: 10px 10px 25px #bababa;
+    box-shadow: 0px 0px 25px #bababa;
     transition: all .1s;
 }
 .book-card:hover{
@@ -404,22 +403,31 @@ nav{
 
 .book-card .card-content{
     width: 100%;
-    height: 35%;
+    height: max-content;
     background-color: white;
     position: absolute;
-    top: 65%;
+    top: 60%;
     border-radius: 0 0 20px 20px;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .book-card .card-content p{
     font-size: 1em;
+    margin: 5px 0;
 }
 
 .book-card .card-content .evaluation{
-    background-color: rgb(139, 67, 67);
-    width: 150px;
-    height: 20px;
+    width: 100%;
+    font-size: 0.8em;
+}
+.evaluation-dark-blue{
+    color: var(--main-blue-color);
+}
+.evaluation-light-blue{
+    color: var(--light-blue-color);
 }
 
 .book-card .cannebiere{
