@@ -537,13 +537,29 @@ nav{
     border-radius: 25px 0 0 25px;
 }
 
-.soleil{
-    background-image: url('assets/images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
+.popular-card-img-base{
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;
     height: 100%;
     background-position-x: -45px;
+}
+
+.soleil{
+    background-image: url('assets/images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
+    
+}
+
+.coeur-de-l-eau{
+    background-image: url('assets/images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg');
+    width: 45%;
+    background-position-x: 0.5px;
+}
+
+.bleu-et-blanc{
+    background-image: url('assets/images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
+    background-position-y: -45px;
+    background-position-x: 0px;
 }
 
 .popular-card-content{
@@ -565,6 +581,7 @@ nav{
 .activity {
     grid-column: span 7;
     display: flex;
+    margin-bottom: 50px;
 }
 .activity > div{
     margin: 25px;
@@ -577,8 +594,8 @@ nav{
 .activity-container{
     display: grid;
     grid-template-columns: repeat(8, 1fr); 
-    grid-template-rows: repeat(8, 70px); 
-    gap: 25px;
+    grid-template-rows: repeat(8, 35px);
+    gap: 50px;
     padding: 25px 0;
 }
 
@@ -591,6 +608,8 @@ nav{
     grid-row: 1 / 9;
     overflow: hidden;
     border-radius: 25px;
+    box-shadow: 0px 0px 25px #bababa;
+    position: relative;
 }
 
 .pomegues{
@@ -598,8 +617,8 @@ nav{
     grid-row: 1 / 6;
     overflow: hidden;
     border-radius: 25px;
-    height: 100%;
-    width: 100%;
+    box-shadow: 0px 0px 25px #bababa;
+    position: relative;
 }
 
 .frioul{
@@ -607,7 +626,9 @@ nav{
     grid-row: 6 / 9;
     overflow: hidden;
     border-radius: 25px;
+    box-shadow: 0px 0px 25px #bababa;
     width: 100%;
+    position: relative;
 }
 
 .calanques{
@@ -615,7 +636,9 @@ nav{
     grid-row: 1 / 9;
     overflow: hidden;
     border-radius: 25px;
+    box-shadow: 0px 0px 25px #bababa;
     width: 100%;
+    position: relative;
 }
 
 .n-d-garde{
@@ -623,38 +646,57 @@ nav{
     grid-row: 1 / 5;
     overflow: hidden;
     border-radius: 25px;
+    box-shadow: 0px 0px 25px #bababa;
     width: 100%;
+    position: relative;
 }
 
-.longchamps{
+.longchamp{
     grid-column: 7 / 9;
     grid-row: 5 / 9;
     overflow: hidden;
     border-radius: 25px;
+    box-shadow: 0px 0px 25px #bababa;
     width: 100%;
+    position: relative;
 }
 
 .activity-card-img-vieux-port{
-    height: 100%;
-    transform: translateX(-35%);
+    transform: translate(-33%, -15%) scale(0.7);
 }
 
 .activity-card-img-pomegues{
-    width: 100%;
-    transform: translateY(-25%);
+    width: 120%;
+    transform: translate(-10%, -25%);
 }
 
 .activity-card-img-frioul{
-    width: 100%;
-    transform: translateY(-5%);
+    width: 105%;
+    transform: translateY(-15%);
 }
 
 .activity-card-img-calanques{
-
+    height: 100%;
+    transform: scale(0.85) translate(-37%, -12%);
 }
 
 .activity-card-img-n-d-garde{
+    width: 100%;
+}
 
+.activity-card-img-longchamp{
+    width: 100%;
+}
+
+.activity-card-content{
+    /*z-index: 15;*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    padding: 20px;
+    font-weight: 700;
 }
 
 /*##  FOOTER SECTION #####################*/
