@@ -591,6 +591,11 @@ nav{
     border-radius: 25px;
 }
 
+.activity h2{
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
 .activity-container{
     display: grid;
     grid-template-columns: repeat(8, 1fr); 
