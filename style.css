@@ -714,16 +714,13 @@ nav{
 footer{
     grid-column: span 7;
     padding: 5px;
-    text-align: center;
     background-color:var(--light-grey-color);
     width: 100%;
-    height: 250px;
 }
 
 .footer-container{
     display: flex;
     align-items: center;
-    height: 250px;
     padding: 25px;
 }
 
@@ -755,65 +752,180 @@ footer{
 }
 
 
-
 /*#########   RESPONSIVE   ############################*/
 
-@media screen and (max-width: 740px) {
+/* Mobile version */
+@media screen and (max-width: 750px) {
     body{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-/*##   HEADER - MENU   ###########################*/
+    /*##   HEADER - MENU   ###########################*/
+    body{
+        margin: 0;
+        font-size: 1em;
+    }
+
     header{
         padding: 0;
+        position: relative;
     }
+
     #logo{
-        margin-left: 15px;
+        margin-left: 20px;
         margin-top: 15px;
     }
+
     nav{
-        width: 100%;
+        position: relative;
         justify-content: center;
         align-items: center;
-        padding: 20px 0;
+        height: auto;
     }
+
+    .menu-nav{
+        width: 100%;
+        margin-top: 15px;
+    }
+
     .menu-nav, .signin-btn{
         height: auto;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
+
     .menu-nav li{
         height: min-content;
+        background-color: #fff;
+        border-bottom: 3px solid var(--light-grey-color);
     }
+
+    .menu-nav li:hover, .menu-nav li:active{
+        border-top: 0;
+        margin-bottom: -10px;
+        border-bottom: 4px solid var(--main-blue-color);
+    }
+
     .menu-nav li:nth-child(1){
-        padding: 0 20px;
+        padding: 0;
         margin-right: 0;
+        width: 50%;
     }
     .menu-nav li:nth-child(2){
-        padding: 0 20px;
+        padding: 0;
         margin-right: 0;
+        width: 50%;
     }
+
+    .menu-nav li a{
+        height: auto;
+        padding: 20px 50px;
+    }
+
     .menu-nav li a::before{
-        margin-bottom: 15px;
+        margin-bottom: 1px;
     }
+
     .menu-nav li a:hover::before{
         margin-bottom: 7px;
     }
-    .signUpArea{
+
+    .signin-btn{
         position: absolute;
         height: auto;
-        top: 5px;
-        right: 15px;
+        top: 15px;
+        right: 10px;
         overflow: hidden;
-        padding-bottom: 10px;
+        padding-bottom: 0;
         margin-left: 0;
     }
-    .signUpArea::before{
-        margin-bottom: 10px;
-    }
-    .signUpArea:hover::before{
-        margin-bottom: 3px;
+
+    .signin-btn::before{
+        margin-bottom: 0;
     }
 
+    .signin-btn:hover::before{
+        margin-bottom: 0;
+    }
+
+    /*##   SEARCH SECTION   ###########################*/
+    .search > div{
+        padding: 0;
+        margin: 30px;
+    }
+
+    .search-intro{
+        line-height: 1em;
+        font-size: 1em;
+    }
+
+    .search-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 35px auto;
+    }
+
+    .search input[type="text"]{
+        width: 170px;
+    }
+
+    .search button[type="submit"]{
+        border-radius: 15px;
+        width: 51px;
+        position: relative;
+        overflow: hidden;
+    }
+    .search button[type="submit"]::before{
+        content: "\f002";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 800;
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid var(--main-blue-color);
+        border-radius: 15px;
+        padding: 15px;
+        height: 100%;
+        width: 51px;
+        background-color: var(--main-blue-color);
+    }
+
+    /* FILTERS */
+    .filter-search-container{
+        display: block;
+    }
+
+    .filter-items-container label{
+        padding: 12px 25px;
+    }
+
+    /* BOOK SECTION */
+    .book > div{
+        margin: 0;
+    }
+
+    /* POPULAR SECTION */
+    .popular > div{
+        margin: 0;
+        border-radius: 0;
+    }
+
+    /* ACTIVITY SECTION */
+    .activity > div{
+        margin: 0;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        flex-direction: column;
+        height: 100%;
+    }
+
+
 /*##   X   ###########################*/
+
+
 }
