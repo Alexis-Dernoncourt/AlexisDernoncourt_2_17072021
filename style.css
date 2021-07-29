@@ -176,7 +176,6 @@ nav{
 }
 
 .search input[type='text']{
-    -webkit-appearance: none;
     height: auto;
     border: 1px solid var(--light-grey-color);
     border-radius: 0;
@@ -962,7 +961,6 @@ footer{
 
     .book .see-more{
         max-width: 450px;
-        max-width: 0 auto;
     }
 
     .book .see-more:active{
