@@ -720,11 +720,12 @@ footer{
     color: var(--main-blue-color);
 }
 
-
+/*#####################################################*/
 /*#########   RESPONSIVE   ############################*/
+/*#####################################################*/
 
 /* Mobile version */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 928px) {
     body{
         grid-template-areas: 
             "header"
@@ -1093,9 +1094,145 @@ footer{
         flex-direction: column;
         height: 100%;
     }
+}
+
+/*##   TABLETTES   ###########################*/
+@media screen and (min-width: 928px) and (max-width: 1280px){
+    body{
+        grid-template-areas: 
+            "header"
+            "search"
+            "popular"
+            "book"
+            "activity"
+            "footer"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        margin: 0;
+        width: 100vw;
+    }
+
+    header{
+        width: 100vw;
+        padding: 0;
+    }
+
+    .search{
+        width: 100vw;
+    }
+    .search > div{
+        margin: 0;
+    }
+
+    /* BOOK SECTION */
+    .book{
+        grid-area: book;
+        width: 100vw;
+        margin: 20px 0;
+    }
+
+    .book-card .card-content h3{
+        font-size: 1em;
+    }
+
+    .book-card .mer{
+        background-position-y: -50px;
+    }
+
+    .book-card .amina{
+        background-position-y: -120px;
+    }
+
+    /* POPULAR SECTION */
+    .popular{
+        grid-area: popular;
+        grid-column: unset;
+        width: 100vw;
+    }
+
+    .popular > div{
+        padding: 50px 150px 0 150px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .coeur-de-l-eau{
+        max-width: 300px;
+        min-width: 300px;
+    }
+    .soleil{
+        max-width: 300px;
+        min-width: 300px;
+        height: 100%;
+        background-position-x: unset;
+    }
+    .bleu-et-blanc{
+        max-width: 300px;
+        min-width: 300px;
+        background-position-y: -150px;
+    }
+
+    /* ACTIVITY SECTION */
+    .activity{
+        grid-area: activity;
+        width: 100vw;
+        margin: 20px 0;
+    }
+
+    .activity > div {
+        height: max-content;
+    }
+
+    .activity-container{
+        gap: 30px;
+    }
+
+    .activity-card-img-n-d-garde, .activity-card-img-longchamp{
+        width: 270px;
+        height: 100%;
+    }
+
+    .activity-card-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* FOOTER */
+    footer{
+        grid-area: footer;
+        width: 100vw;
+    }
+
+    .footer-container{
+        width: 100%;
+    }
+}
+/*#### Gestion des erreurs d'affichage ####*/
+@media screen and (min-width: 1280px) and (max-width: 1850px){
+    h3{
+        font-size: 1em;
+    }
+
+    .book-card .card-content{
+        padding: 5px 10px;
+        min-height: 80px;
+    }
+
+    .book-card .card-content p{
+        font-size: .9em;
+    }
+
+    .book-card .mer, .book-card .amina{
+        background-position-y: -50px;
+    }
 
 
-/*##   X   ###########################*/
+    .book-card .amina{}
 
-
+    .soleil, .coeur-de-l-eau, .bleu-et-blanc{
+        min-width: 100px;
+        max-width: 150px;
+    }
 }
