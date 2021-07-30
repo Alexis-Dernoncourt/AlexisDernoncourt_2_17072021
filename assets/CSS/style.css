@@ -33,7 +33,6 @@ li, a, .signin-btn{
 a{
     text-decoration: none;
 }
-
 body{
     display: grid;
     align-content: center;
@@ -426,7 +425,7 @@ nav{
 }
 
 .book-card .cannebiere{
-    background-image: url('assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -435,7 +434,7 @@ nav{
 }
 
 .book-card .port{
-    background-image: url('assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -444,7 +443,7 @@ nav{
 }
 
 .book-card .mouettes{
-    background-image: url('assets/images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -453,7 +452,7 @@ nav{
 }
 
 .book-card .mer{
-    background-image: url('assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -462,7 +461,7 @@ nav{
 }
 
 .book-card .panier{
-    background-image: url('assets/images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -471,7 +470,7 @@ nav{
 }
 
 .book-card .amina{
-    background-image: url('assets/images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -540,18 +539,18 @@ nav{
 }
 
 .soleil{
-    background-image: url('assets/images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
     
 }
 
 .coeur-de-l-eau{
-    background-image: url('assets/images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg');
     width: 52%;
     background-position-x: 0.5px;
 }
 
 .bleu-et-blanc{
-    background-image: url('assets/images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
+    background-image: url('../../assets/images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
     background-position-x: 0px;
 }
 
