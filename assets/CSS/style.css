@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*, ::before, ::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 :root{
     --main-blue-color: #0065FC;
     --light-blue-color: #DEEBFF;
@@ -34,7 +28,7 @@ h2[id]:before{
 li, a, .signin-btn{
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1rem;
 }
 a{
     text-decoration: none;
@@ -46,10 +40,9 @@ body{
     grid-template-columns: repeat(6, 1fr); 
     grid-template-rows: 1fr; 
     gap: 0px 0px;
-    margin: 0 5px;
     background-color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
-    font-size: 1.125em;
+    font-size: 1.125rem;
 }
 
 header{
@@ -139,55 +132,65 @@ nav{
 
 /* ## MAIN AREA ########################### */
 
+/*## SEARCH ###########################*/
 .search { 
     grid-column: span 7;
-    height: auto;
 }
 .search > div{
     margin: 20px;
     padding: 50px;
 }
 .search h1{
-    line-height: 2rem;
     margin-bottom: 10px;
-    font-size: 1.35em;
+    font-size: 1.35rem;
     margin-left: 5px;
 }
 .search-intro{
     line-height: 2rem;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     margin-left: 5px;
 }
-.search-container{
-    display: inline-flex;
+
+.travel-search{
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
     margin: 20px 5px 40px 5px;
     border-radius: 20px;
-    padding-left: 20px;
-    width: max-content;
-    background-color: var(--light-grey-color);
+    /*background-color: var(--light-grey-color);*/
 }
+
+.span-search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey-color);
+    min-width: 50px;
+    max-width: 70px;
+    border-radius: 20px 0 0 20px;
+}
+
 .search-container span{
     margin: 0 2px;
 }
 
-.search input[type='text']{
+.search input[type='search']{
     height: auto;
+    width: 100%;
     border: 1px solid var(--light-grey-color);
     border-radius: 0;
-    margin-left: 12px;
     padding: 15px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1rem;
 }
-::placeholder{
-    color: rgb(30, 30, 30);
-}
+
 .search button[type='submit']{
     background-color: var(--main-blue-color);
     color: white;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1rem;
     width: 150px;
     height: auto;
     margin-left: -5px;
@@ -254,7 +257,7 @@ nav{
     width: 50px;
     border-radius: 50px;
     font-family: 'Font Awesome 5 Free';
-    font-size: 1.25em;
+    font-size: 1.25rem;
     color: var(--main-blue-color);
     text-align: center;
 }
@@ -350,7 +353,7 @@ nav{
 }
 
 .book h2{
-    font-size: 1.75em;
+    font-size: 1.75rem;
 }
 
 .book-container a, .popular-card-container a, .activity-container a{
@@ -374,12 +377,12 @@ nav{
     transition: all .1s;
 }
 .book-card:active, .popular-card:active, .activity-card-container:active{
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: all .1s;
 }
 
 .book .see-more{
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 700;
     color: black;
 }
@@ -407,13 +410,13 @@ nav{
 }
 
 .book-card .card-content p{
-    font-size: 1em;
+    font-size: 1rem;
     margin: 5px 0;
 }
 
 .evaluation{
     width: 100%;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 .evaluation-dark-blue{
     color: var(--main-blue-color);
@@ -500,7 +503,7 @@ nav{
 }
 
 .popular-container h2, .fa-chart-line {
-    font-size: 1.75em;
+    font-size: 1.75rem;
 }
 
 .popular-card-container{
@@ -549,7 +552,6 @@ nav{
 
 .bleu-et-blanc{
     background-image: url('assets/images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
-    background-position-y: -45px;
     background-position-x: 0px;
 }
 
@@ -576,14 +578,14 @@ nav{
 }
 .activity > div{
     margin: 25px;
-    padding: 50px;
+    padding: 10px 50px 50px 50px;
     width: 100%;
     height: 850px;
     border-radius: 25px;
 }
 
 .activity h2{
-    font-size: 1.75em;
+    font-size: 1.75rem;
     margin-bottom: 10px;
 }
 
@@ -718,8 +720,8 @@ footer{
 /*#########   RESPONSIVE   ############################*/
 /*#####################################################*/
 
-/* Mobile version */
-@media screen and (max-width: 928px) {
+/* Mobile & Tab */
+@media screen and (max-width: 768px) {
     body{
         grid-template-areas: 
             "header"
@@ -735,7 +737,7 @@ footer{
     /*##   HEADER - MENU   ###########################*/
     body{
         margin: 0;
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     header{
@@ -810,7 +812,7 @@ footer{
         right: 10px;
         overflow: hidden;
         padding-bottom: 0;
-        margin-left: 0;
+        margin: 5px 15px;
     }
 
     .signin-btn::before{
@@ -821,7 +823,7 @@ footer{
         margin-bottom: 0;
     }
 
-    #signin-btn:active{
+    .signin-btn:active{
         color: #29b6f6;
     }
 
@@ -838,27 +840,26 @@ footer{
     }
 
     .search h1{
-        font-size: 1.125em;
+        font-size: 1.125rem;
         line-height: normal;
     }
 
     .search-intro{
         line-height: 1em;
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .search-container{
         display: flex;
-        margin: 30px auto;
+        justify-content: center;
+        align-items: stretch;
+        margin: 30px 0;
     }
 
-    .search input[type="text"]{
-        width: 170px;
-    }
 
     .search button[type="submit"]{
         border-radius: 15px;
-        width: 51px;
+        width: 59px;
         position: relative;
         overflow: hidden;
     }
@@ -879,7 +880,7 @@ footer{
         background-color: var(--main-blue-color);
     }
 
-    /* FILTERS */
+    /* FILTERS SECTION */
     .filter-search-container{
         display: block;
     }
@@ -915,12 +916,11 @@ footer{
     }
 
     .book h2{
-        font-size: 1.5em;
+        font-size: 1.3rem;
     }
 
     .book-container .book-card{
-        height: 190px;
-        max-width: 450px;
+        height: 200px;
         margin: 0 auto;
     }
 
@@ -975,22 +975,23 @@ footer{
     }
 
     .popular-card{
-        height: 190px;
+        height: 200px;
         width: 100%;
-        max-width: 450px;
         margin: 5px auto;
+        position: relative;
     }
 
     .popular-container h2{
-        font-size: 1.5em;
+        font-size: 1.3rem;
     }
     .fa-chart-line{
-        font-size: 1.45em;
+        font-size: 1.45rem;
     }
 
     .popular-card-img-base{
         min-width: 35%;
-        transform: scale(1.5);
+        max-width: 35%;
+        background-position-x: 0;
     }
 
     .soleil{
@@ -1005,7 +1006,14 @@ footer{
     }
 
     .popular-card-content{
-        padding: 10px 10px 10px 35px;
+        padding: 10px 10px 10px 20px;
+        position: absolute;
+        top: 10px;
+        left: 35%;
+        z-index: 15;
+        display: flex;
+        height: 80%;
+        justify-content: space-between;
     }
 
     /* ACTIVITY SECTION */
@@ -1031,8 +1039,7 @@ footer{
 
     .activity-card-container{
         width: 100%;
-        max-width: 450px;
-        height: 190px;
+        height: 200px;
         margin: 0 auto;
     }
 
@@ -1041,7 +1048,7 @@ footer{
     }
 
     .activity h2{
-        font-size: 1.5em;
+        font-size: 1.3rem;
     }
 
     .activity-card-content{
@@ -1089,8 +1096,8 @@ footer{
     }
 }
 
-/*##   TABLETTES   ###########################*/
-@media screen and (min-width: 928px) and (max-width: 1280px){
+/*##   TAB Optimisation   ###########################*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
     body{
         grid-template-areas: 
             "header"
@@ -1126,7 +1133,7 @@ footer{
     }
 
     .book-card .card-content h3{
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .book-card .mer{
@@ -1203,9 +1210,15 @@ footer{
     }
 }
 /*#### Gestion des erreurs d'affichage ####*/
-@media screen and (min-width: 1280px) and (max-width: 1850px){
+@media screen and (min-width: 480px) and (max-width: 928px){
+    .bleu-et-blanc{
+        background-position-y: 0px;
+        background-origin: content-box;
+    }
+}
+@media screen and (min-width: 1280px){
     h3{
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .book-card .card-content{
@@ -1214,7 +1227,7 @@ footer{
     }
 
     .book-card .card-content p{
-        font-size: .9em;
+        font-size: .9rem;
     }
 
     .book-card .mer, .book-card .amina{
