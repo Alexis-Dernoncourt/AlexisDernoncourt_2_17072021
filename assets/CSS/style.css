@@ -53,15 +53,19 @@ header{
     z-index: 1000;
 }
 
-#logo{
+.logo-link{
     cursor: pointer;
-    display: block;
+    display: flex;
     width: 100%;
     max-width: 120px;
     min-height: 50px;
     height: 100%;
     margin-left: 50px;
     margin-right: auto;
+}
+
+.logo{
+
 }
 
 nav{
@@ -746,7 +750,7 @@ footer{
         width: 100vw;
     }
 
-    #logo{
+    .logo-link{
         margin-left: 20px;
         margin-top: 15px;
     }
