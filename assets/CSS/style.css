@@ -42,6 +42,8 @@ body{
     background-color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
     font-size: 1.125rem;
+    max-width: 1800px;
+    margin: auto;
 }
 
 header{
@@ -361,12 +363,15 @@ nav{
 }
 
 .book-container .book-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 270px;
     background-color: #fff;
     border-radius: 25px;
     padding: 5px;
-    position: relative;
     overflow: hidden;
     box-shadow: 0px 0px 15px #bababa;
     transition: all .1s;
@@ -391,16 +396,15 @@ nav{
 
 .book-card .card-head{
     width: 100%;
-    height: auto;
-    border-radius: 20px;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
 }
 
 .book-card .card-content{
     width: 100%;
     height: max-content;
+    max-height: 90px;
     background-color: white;
-    position: absolute;
-    top: 60%;
     border-radius: 0 0 20px 20px;
     padding: 15px;
     display: flex;
@@ -428,54 +432,36 @@ nav{
     background-image: url('../../assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 90%;
-    background-position-y: -35px;
 }
 
 .book-card .port{
     background-image: url('../../assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 90%;
-    background-position-y: -35px;
 }
 
 .book-card .mouettes{
     background-image: url('../../assets/images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 90%;
-    background-position-y: -35px;
 }
 
 .book-card .mer{
     background-image: url('../../assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 90%;
-    background-position-y: -90px;
 }
 
 .book-card .panier{
     background-image: url('../../assets/images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 90%;
-    background-position-y: -35px;
 }
 
 .book-card .amina{
     background-image: url('../../assets/images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 90%;
-    background-position-y: -180px;
 }
 
 
@@ -945,7 +931,7 @@ footer{
 
     .book-card .amina{
         background-image: url('../../assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
-        width: 100%;
+        background-position-y: -200px;
     }
 
     .book-card .card-content{
@@ -974,7 +960,7 @@ footer{
     }
 
     .popular-card{
-        height: 200px;
+        height: 150px;
         width: 100%;
         margin: 5px auto;
         position: relative;
@@ -1005,11 +991,9 @@ footer{
     }
 
     .popular-card-content{
-        padding: 10px 10px 10px 20px;
+        padding: 0 10px;
         position: absolute;
-        top: 10px;
         left: 35%;
-        z-index: 15;
         display: flex;
         height: 80%;
         justify-content: space-between;
@@ -1211,7 +1195,7 @@ footer{
 /*#### Gestion des erreurs d'affichage ####*/
 @media screen and (min-width: 480px) and (max-width: 928px){
     .bleu-et-blanc{
-        background-position-y: 0px;
+        background-position-y: -150px;
         background-origin: content-box;
     }
 }
