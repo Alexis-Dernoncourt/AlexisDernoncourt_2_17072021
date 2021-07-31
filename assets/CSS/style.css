@@ -64,10 +64,6 @@ header{
     margin-right: auto;
 }
 
-.logo{
-
-}
-
 nav{
     display: flex;
     justify-content: flex-end;
