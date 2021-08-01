@@ -241,7 +241,7 @@ nav{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 50px;
     border-radius: 50%;
     white-space: nowrap;
     transition: all .2s;
