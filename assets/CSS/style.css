@@ -215,7 +215,9 @@ nav{
 
 .filter-items-container div{
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin: 5px 10px;
     width: max-content;
     height: 50px;
@@ -236,7 +238,10 @@ nav{
 }
 
 .filter-items-container label{
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     border-radius: 50%;
     white-space: nowrap;
     transition: all .2s;
@@ -875,7 +880,7 @@ footer{
     }
 
     .filter-items-container label{
-        padding: 12px 18px;
+        padding: 12px 25px;
         font-weight: 600;
     }
 
