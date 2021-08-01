@@ -249,9 +249,6 @@ nav{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
-.filter-items-container label:hover{
-    color: var(--main-blue-color);
-}
 
 .filter-items-container label::before{
     display: inline-block;
