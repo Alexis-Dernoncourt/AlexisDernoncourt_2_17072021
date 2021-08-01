@@ -216,7 +216,6 @@ nav{
 .filter-items-container div{
     position: relative;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
     margin: 5px 10px;
     width: max-content;
