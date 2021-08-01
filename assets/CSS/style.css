@@ -238,7 +238,6 @@ nav{
 
 .filter-items-container label{
     display: inline-flex;
-    justify-content: center;
     align-items: center;
     height: 50px;
     border-radius: 50%;
