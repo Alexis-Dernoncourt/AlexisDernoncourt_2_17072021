@@ -335,10 +335,11 @@ nav{
 .book { 
     grid-column: span 4;
     display: flex;
+    padding: 25px;
+    overflow: hidden;
 }
 .book > div{
     background-color:var(--light-grey-color);
-    margin: 25px;
     padding: 50px;
     width: 100%;
     border-radius: 25px;
@@ -346,10 +347,9 @@ nav{
 
 .book-container{
     display: grid;
-    justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: 50px 50px;
+    gap: 20px 20px;
     padding: 50px 0;
 }
 
@@ -365,10 +365,8 @@ nav{
 .book-container .book-card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 270px;
+    height: 250px;
     background-color: #fff;
     border-radius: 25px;
     padding: 5px;
@@ -398,6 +396,11 @@ nav{
     width: 100%;
     height: 100%;
     border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.book-card-img{
+    width: 100%;
 }
 
 .book-card .card-content{
@@ -428,54 +431,19 @@ nav{
     color: var(--light-blue-color);
 }
 
-.book-card .cannebiere{
-    background-image: url('../../assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.book-card .port{
-    background-image: url('../../assets/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.book-card .mouettes{
-    background-image: url('../../assets/images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.book-card .mer{
-    background-image: url('../../assets/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.book-card .panier{
-    background-image: url('../../assets/images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.book-card .amina{
-    background-image: url('../../assets/images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 
 /*## POPULAR SECTION #########################*/
 
 .popular {
     grid-column: span 3;
     display: flex;
+    padding: 25px;
+    overflow: hidden;
 }
 .popular-container{
     display: flex;
     flex-direction: column;
     background-color: var(--light-grey-color);
-    margin: 25px;
     padding: 50px 50px 0 50px;
     width: 100%;
     border-radius: 25px;
@@ -504,7 +472,7 @@ nav{
     background-color: #fff;
     border-radius: 25px;
     padding: 5px;
-    margin: 25px 0;
+    margin: 15px 0;
     display: flex;
     box-shadow: 0px 0px 15px #bababa;
     overflow: hidden;
@@ -512,13 +480,12 @@ nav{
 }
 
 .popular-card-img-container{
-    width: 35%;
-    height: 100%;
+    min-width: 35%;
     border-radius: 25px 0 0 25px;
     overflow: hidden;
 }
 
-.popular-card-img-bleu-et-blanc {
+.bleu-et-blanc {
     margin-top: -130px;
 }
 
@@ -526,8 +493,12 @@ nav{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    padding: 10px 25px;
-    max-width: 250px;
+    padding: 10px 15px;
+    width: 250px;
+}
+
+.popular-card-content h3{
+    margin-bottom: 5px;
 }
 
 .popular-card-evaluation{
@@ -542,10 +513,10 @@ nav{
 .activity {
     grid-column: span 7;
     display: flex;
-    margin-bottom: 20px;
+    padding: 25px;
+    /* margin-bottom: 20px; */
 }
 .activity > div{
-    margin: 25px;
     padding: 10px 50px 50px 50px;
     width: 100%;
     height: 850px;
@@ -892,31 +863,6 @@ footer{
         margin: 0 auto;
     }
 
-    .book-card .cannebiere{
-        background-image: url('../../assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
-    }
-
-    .book-card .port{
-        background-image: url('../../assets/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
-    }
-
-    .book-card .mouettes{
-        background-image: url('../../assets/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg');
-    }
-
-    .book-card .mer{
-        background-image: url('../../assets/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
-    }
-
-    .book-card .panier{
-        background-image: url('../../assets/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
-    }
-
-    .book-card .amina{
-        background-image: url('../../assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
-        background-position-y: -200px;
-    }
-
     .book-card .card-content{
         top: 55%;
         padding: 5px 10px;
@@ -933,12 +879,12 @@ footer{
     /* POPULAR SECTION */
     .popular{
         grid-area: popular;
+        padding: 0;
     }
     .popular-container{
         margin: 0;
         padding: 30px 20px;
         border-radius: 0;
-        width: 100vw;
     }
     
     .popular-container h2{
@@ -962,8 +908,8 @@ footer{
 
     .popular-card-content{
         padding: 0 10px;
-        position: absolute;
-        left: 35%;
+        /* position: absolute;
+        left: 35%; */
         display: flex;
         height: 80%;
         justify-content: space-between;
@@ -974,6 +920,7 @@ footer{
         grid-area: activity;
         width: 100vw;
         margin: 20px 0;
+        padding: 0;
     }
     .activity > div{
         margin: 0;
@@ -1050,18 +997,8 @@ footer{
 }
 
 /*##   TAB Optimisation   ###########################*/
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 769px) and (max-width: 1300px){
     body{
-        grid-template-areas: 
-            "header"
-            "search"
-            "popular"
-            "book"
-            "activity"
-            "footer"
-        ;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
         margin: 0;
         width: 100vw;
     }
@@ -1080,55 +1017,59 @@ footer{
 
     /* BOOK SECTION */
     .book{
-        grid-area: book;
-        width: 100vw;
-        margin: 20px 0;
+    }
+
+    .book > div{
+        width: inherit;
+    }
+
+    .book-container a{
+        height: 100%;
+    }
+
+    .card-head{
+        height: none;
+        
     }
 
     .book-card .card-content h3{
         font-size: 1rem;
     }
 
-    .book-card .mer{
-        background-position-y: -50px;
+    .book-card-img{
     }
 
-    .book-card .amina{
-        background-position-y: -120px;
+    .mer{
+    }
+
+    .panier{
+    }
+
+    .amina{
+    }
+
+    .book-card .card-content{
+        padding: 5px;
+        max-height: none;
     }
 
     /* POPULAR SECTION */
-    .popular{
-        grid-area: popular;
-        grid-column: unset;
-        width: 100vw;
+    .popular-cards-container{
+        gap: 15px;
+    }
+    .popular-cards-container a{
+        height: 100%;
+    }
+
+    .popular-card{
+        margin: 0;
     }
 
     .popular > div{
-        padding: 50px 150px 0 150px;
-        margin: 0;
-        border-radius: 0;
-    }
-
-    .coeur-de-l-eau{
-        max-width: 300px;
-        min-width: 300px;
-    }
-    .soleil{
-        max-width: 300px;
-        min-width: 300px;
-        height: 100%;
-        background-position-x: unset;
-    }
-    .bleu-et-blanc{
-        max-width: 300px;
-        min-width: 300px;
-        background-position-y: -150px;
     }
 
     /* ACTIVITY SECTION */
     .activity{
-        grid-area: activity;
         width: 100vw;
         margin: 20px 0;
     }
@@ -1154,7 +1095,6 @@ footer{
 
     /* FOOTER */
     footer{
-        grid-area: footer;
         width: 100vw;
     }
 
@@ -1163,12 +1103,6 @@ footer{
     }
 }
 /*#### Gestion des erreurs d'affichage ####*/
-@media screen and (min-width: 480px) and (max-width: 928px){
-    .bleu-et-blanc{
-        background-position-y: -150px;
-        background-origin: content-box;
-    }
-}
 @media screen and (min-width: 1280px){
     h3{
         font-size: 1rem;
@@ -1185,10 +1119,5 @@ footer{
 
     .book-card .mer, .book-card .amina{
         background-position-y: -50px;
-    }
-
-    .soleil, .coeur-de-l-eau, .bleu-et-blanc{
-        min-width: 100px;
-        max-width: 150px;
     }
 }
