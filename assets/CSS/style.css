@@ -1199,6 +1199,9 @@ footer{
     .book h2, .activity h2, .popular-container h2, .fa-chart-line{
         font-size: 1.4rem;
     }
+    .fa-chart-line{
+        margin-left: 15px;
+    }
 
     .popular-container{
         padding: 40px 20px 0 20px;
