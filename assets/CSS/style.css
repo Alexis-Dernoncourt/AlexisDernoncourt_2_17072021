@@ -472,7 +472,7 @@ nav{
 .popular-cards-container{
     display: flex;
     flex-direction: column;
-    padding-top: 25px;
+    padding-top: 50px;
     align-items: stretch;
 }
 
