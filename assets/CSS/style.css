@@ -874,7 +874,7 @@ footer{
         margin: 0 auto;
     }
 
-    .cannebiere, .port, .mouettes, .mer, .panier{
+    .cannebiere, .port, .mouettes, .mer {
         transform: translateY(-40%);
     }
 
@@ -1182,10 +1182,6 @@ footer{
 @media screen and (min-width: 951px) and (max-width: 1500px) {
     .book-container .book-card{
         height: 200px;
-    }
-
-    .book-card .card-head{
-        height: unset;
     }
 
     .mer, .amina{
