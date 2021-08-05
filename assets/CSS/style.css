@@ -402,6 +402,12 @@ nav{
 .book-card-img{
     width: 100%;
 }
+.cannebiere, .port, .mouettes, .mer, .panier{
+    transform: translateY(-10%);
+}
+.amina{
+    transform: translate(0, -50%);
+}
 
 .book-card .card-content{
     width: 100%;
@@ -660,7 +666,7 @@ footer{
 /*#####################################################*/
 
 /* Mobile & Tab */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
     body{
         grid-template-areas: 
             "header"
@@ -837,6 +843,7 @@ footer{
     .book{
         grid-area: book;
         margin: 20px 0;
+        padding: 0;
     }
     .book > div{
         margin: 0;
@@ -861,6 +868,14 @@ footer{
     .book-container .book-card{
         height: 200px;
         margin: 0 auto;
+    }
+
+    .cannebiere, .port, .mouettes, .mer, .panier{
+        transform: translateY(-40%);
+    }
+
+    .amina{
+        transform: translate(0, -50%);
     }
 
     .book-card .card-content{
@@ -898,7 +913,6 @@ footer{
         height: 150px;
         width: 100%;
         margin: 5px auto;
-        position: relative;
     }
 
     .popular-card-img-container{
@@ -908,8 +922,6 @@ footer{
 
     .popular-card-content{
         padding: 0 10px;
-        /* position: absolute;
-        left: 35%; */
         display: flex;
         height: 80%;
         justify-content: space-between;
@@ -993,11 +1005,73 @@ footer{
     .footer-container{
         flex-direction: column;
         height: 100%;
+        padding: 0;
     }
 }
 
 /*##   TAB Optimisation   ###########################*/
-@media screen and (min-width: 769px) and (max-width: 1300px){
+@media screen and (min-width: 560px) and (max-width: 950px){
+    /*  BOOK  */
+    .book-container .book-card{
+        height: 250px;
+    }
+    .book-card .card-content{
+        flex-direction: row;
+        align-items: center;
+        height: 100px;
+    }
+    .book-card .card-content h3{
+        font-size: 1.2rem;
+    }
+    /*  POPULAR  */
+    .popular-card-content{
+        flex-direction: row;
+        width: 100%;
+        height: unset;
+        padding: 0;
+    }
+    .popular-card-content div{
+        align-self: center;
+    }
+    .popular-card-content h3{
+        font-size: 1.2rem;
+    }
+    .evaluation{
+        width: unset;
+        min-width: 100px;
+    }
+
+    /*  ACTIVITY  */
+    .activity-card-content{
+        text-align: center;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+    .activity-card-img-vieux-port{
+        transform: translateY(-100px);
+    }
+    .activity-card-img-pomegues{
+        transform: translateY(-45%);
+    }
+    .activity-card-img-frioul{
+        transform: translateY(-32%);
+    }
+    .activity-card-img-calanques{
+        transform: translateY(-45%);
+    }
+    .activity-card-img-n-d-garde{
+        transform: translateY(-15%);
+    }
+    .activity-card-img-longchamp{
+        transform: translateY(-30%);
+    }
+
+    /*  FOOTER  */
+    .footer-container{
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 951px) and (max-width: 1300px){
     body{
         margin: 0;
         width: 100vw;
@@ -1115,9 +1189,5 @@ footer{
 
     .book-card .card-content p{
         font-size: .9rem;
-    }
-
-    .book-card .mer, .book-card .amina{
-        background-position-y: -50px;
     }
 }
