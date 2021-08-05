@@ -366,6 +366,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     height: 250px;
     background-color: #fff;
     border-radius: 25px;
@@ -402,8 +403,11 @@ nav{
 .book-card-img{
     width: 100%;
 }
-.cannebiere, .port, .mouettes, .mer, .panier{
+.cannebiere, .port, .mouettes, .mer{
     transform: translateY(-10%);
+}
+.panier{
+    height: 100%;
 }
 .amina{
     transform: translate(0, -50%);
@@ -411,8 +415,8 @@ nav{
 
 .book-card .card-content{
     width: 100%;
-    height: max-content;
-    max-height: 90px;
+    height: 120px;
+    max-height: max-content;
     background-color: white;
     border-radius: 0 0 20px 20px;
     padding: 15px;
@@ -474,7 +478,7 @@ nav{
 
 .popular-card{
     width: 100%;
-    height: 180px;
+    height: 150px;
     background-color: #fff;
     border-radius: 25px;
     padding: 5px;
@@ -1103,7 +1107,6 @@ footer{
 
     .card-head{
         height: none;
-        
     }
 
     .book-card .card-content h3{
@@ -1111,6 +1114,8 @@ footer{
     }
 
     .book-card-img{
+        height: 100%;
+        max-height: 120px;
     }
 
     .mer{
@@ -1137,9 +1142,6 @@ footer{
 
     .popular-card{
         margin: 0;
-    }
-
-    .popular > div{
     }
 
     /* ACTIVITY SECTION */
@@ -1177,6 +1179,47 @@ footer{
     }
 }
 /*#### Gestion des erreurs d'affichage ####*/
+@media screen and (min-width: 951px) and (max-width: 1500px) {
+    .book-container .book-card{
+        height: 200px;
+    }
+
+    .book-card .card-head{
+        height: unset;
+    }
+
+    .mer, .amina{
+        transform: unset;
+    }
+
+    .book-card .card-content{
+        height: unset;
+    }
+
+    .book-card .card-content p{
+        font-size: 0.85rem;
+    }
+
+    .book h2, .activity h2, .popular-container h2, .fa-chart-line{
+        font-size: 1.4rem;
+    }
+
+    .popular-container{
+        padding: 40px 20px 0 20px;
+    }
+
+    .popular-card{
+        width: 100%;
+    }
+
+    .popular-card-content{
+        padding: unset;
+    }
+
+    .popular-card-content p{
+        font-size: 0.9rem;
+    }
+}
 @media screen and (min-width: 1280px){
     h3{
         font-size: 1rem;
