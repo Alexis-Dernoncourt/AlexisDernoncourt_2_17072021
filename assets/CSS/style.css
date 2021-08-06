@@ -1109,10 +1109,6 @@ footer {
         height: 100%;
     }
 
-    .card-head {
-        height: none;
-    }
-
     .book-card .card-content h3 {
         font-size: 90%;
     }
