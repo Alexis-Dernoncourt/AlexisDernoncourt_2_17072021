@@ -586,7 +586,7 @@ nav {
 }
 
 .activity-card-img-vieux-port {
-    transform: translate(-33%, -15%) scale(0.7);
+    transform: translate(-37%, -15%) scale(0.7);
 }
 
 .activity-card-img-pomegues {
@@ -605,7 +605,7 @@ nav {
 }
 
 .activity-card-img-n-d-garde {
-    width: 100%;
+    transform: translate(-200px);
 }
 
 .activity-card-img-longchamp {
@@ -1161,6 +1161,7 @@ footer {
     .activity-card-img-n-d-garde, .activity-card-img-longchamp {
         width: 270px;
         height: 100%;
+        transform: none;
     }
 
     .activity-card-content {
