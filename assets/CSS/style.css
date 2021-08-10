@@ -403,14 +403,10 @@ nav {
 .book-card-img {
     width: 100%;
 }
-.cannebiere, .port, .mouettes, .mer {
-    transform: translateY(-10%);
-}
-.panier {
+.cannebiere, .port, .mouettes, .mer, .panier, .amina {
+    object-fit: cover;
+    width: 100%;
     height: 100%;
-}
-.amina {
-    transform: translate(0, -50%);
 }
 
 .book-card .card-content {
@@ -496,8 +492,10 @@ nav {
     overflow: hidden;
 }
 
-.bleu-et-blanc  {
-    margin-top: -130px;
+.soleil, .coeur-de-l-eau, .bleu-et-blanc  {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .popular-card-content {
@@ -553,11 +551,10 @@ nav {
 }
 
 .vieux-port, .pomegues, .frioul, .calanques, .n-d-garde, .longchamp {
-    overflow: hidden;
     border-radius: 25px;
     box-shadow: 0px 0px 15px #bababa;
-    width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .vieux-port {
@@ -585,31 +582,18 @@ nav {
     grid-row: 5 / 9;
 }
 
-.activity-card-img-vieux-port {
-    transform: translate(-37%, -15%) scale(0.7);
-}
-
-.activity-card-img-pomegues {
-    width: 120%;
-    transform: translate(-10%, -25%);
-}
-
-.activity-card-img-frioul {
-    width: 105%;
-    transform: translateY(-15%);
-}
-
-.activity-card-img-calanques {
-    height: 100%;
-    transform: scale(0.85) translate(-37%, -12%);
-}
-
-.activity-card-img-n-d-garde {
-    transform: translate(-200px);
-}
-
-.activity-card-img-longchamp {
+.activity-card-img{
+    object-fit: cover;
     width: 100%;
+    height: 100%;
+}
+
+.activity-card-img-vieux-port, .activity-card-img-calanques {
+    width: unset;
+}
+
+.activity-card-img-pomegues{
+    transform: translateY(-15%);
 }
 
 .activity-card-content {
@@ -872,14 +856,6 @@ footer {
         margin: 0 auto;
     }
 
-    .cannebiere, .port, .mouettes, .mer {
-        transform: translateY(-40%);
-    }
-
-    .amina {
-        transform: translate(0, -50%);
-    }
-
     .book-card .card-content {
         top: 55%;
         padding: 5px 10px;
@@ -974,31 +950,11 @@ footer {
         transform: translate(0, -25px) scale(1);
     }
 
-    .activity-card-img-pomegues {
-        width: 100%;
-        transform: translate(0, -40%) scale(1);
-    }
-
-    .activity-card-img-frioul {
-        width: 100%;
-        transform: translate(0, -17%) scale(1);
-    }
-
     .activity-card-img-calanques {
-        height: unset;
         width: 100%;
         transform: translate(0, -25%) scale(1);
     }
 
-    .activity-card-img-n-d-garde {
-        width: 100%;
-        transform: translate(0, -7%) scale(1);
-    }
-
-    .activity-card-img-longchamp {
-        width: 100%;
-        transform: translate(0, -28%) scale(1);
-    }
 
     /* FOOTER */
     footer {
@@ -1050,24 +1006,6 @@ footer {
         text-align: center;
         height: 70px;
         font-size: 1.2rem;
-    }
-    .activity-card-img-vieux-port {
-        transform: translateY(-100px);
-    }
-    .activity-card-img-pomegues {
-        transform: translateY(-45%);
-    }
-    .activity-card-img-frioul {
-        transform: translateY(-32%);
-    }
-    .activity-card-img-calanques {
-        transform: translateY(-45%);
-    }
-    .activity-card-img-n-d-garde {
-        transform: translateY(-15%);
-    }
-    .activity-card-img-longchamp {
-        transform: translateY(-30%);
     }
 
     /*  FOOTER  */
@@ -1136,10 +1074,6 @@ footer {
         height: 140px;
     }
 
-    .bleu-et-blanc {
-        transform: translateY(-50px) translateX(-20px);
-    }
-
     .popular-card-content {
         margin: 8px 5px;
     }
@@ -1158,11 +1092,6 @@ footer {
         gap: 30px;
     }
 
-    .activity-card-img-n-d-garde, .activity-card-img-longchamp {
-        width: 270px;
-        height: 100%;
-        transform: none;
-    }
 
     .activity-card-content {
         display: flex;
@@ -1185,10 +1114,6 @@ footer {
 @media screen and (min-width: 951px) and (max-width: 1500px) {
     .book-container .book-card {
         height: 200px;
-    }
-
-    .mer, .amina {
-        transform: unset;
     }
 
     .book-card .card-content {
